@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | IT & Digital Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* --- General Reset & Typography --- */
+        :root {
+            --primary-color: #2563eb; /* Royal Blue */
+            --secondary-color: #1e293b; /* Dark Slate */
+            --accent-color: #3b82f6; /* Lighter Blue */
+            --bg-color: #f8fafc; /* Very Light Grey */
+            --card-bg: #ffffff;
+            --text-color: #475569;
+            --heading-color: #0f172a;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* --- Layout --- */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        header h1 {
+            color: var(--heading-color);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+            color: var(--text-color);
+        }
+
+        /* --- Grid System --- */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        /* --- Service Cards --- */
+        .service-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid var(--primary-color);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .icon-wrapper {
+            width: 60px;
+            height: 60px;
+            background-color: #eff6ff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .icon-wrapper i {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .service-card h2 {
+            color: var(--heading-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+        }
+
+        .focus-text {
+            color: var(--accent-color);
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .service-list {
+            list-style: none;
+            margin-top: auto; /* Pushes list to fit evenly */
+        }
+
+        .service-list li {
+            margin-bottom: 0.75rem;
+            position: relative;
+            padding-left: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .service-list li::before {
+            content: "\f00c"; /* FontAwesome Checkmark */
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+        }
+
+        .service-list li strong {
+            color: var(--secondary-color);
+            font-weight: 600;
+        }
+
+        /* Helper for the PR Card description text */
+        .card-description {
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        /* --- Responsive Tweaks --- */
+        @media (max-width: 768px) {
+            header h1 { font-size: 2rem; }
+            .container { padding: 2rem 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Our Services</h1>
+            <p>Comprehensive technology services designed to streamline your operations, protect your assets, and amplify your message.</p>
+        </header>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="icon-wrapper"><i class="fa-solid fa-code"></i></div>
+                <h2>Software Solutions</h2>
+                <span class="focus-text">Focus: Streamlining Operations</span>
+                <ul class="service-list">
+                    <li><strong>Custom Apps:</strong> Tailored web & mobile applications.</li>
+                    <li><strong>ERP Systems:</strong> Integrated real-time process management.</li>
+                    <li><strong>Database Mgmt:</strong> Secure architecture & optimization.</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="icon-wrapper"><i class="fa-solid fa-server"></i></div>
+                <h2>Hardware Solutions</h2>
+                <span class="focus-text">Focus: Physical Infrastructure</span>
+                <ul class="service-list">
+                    <li><strong>Procurement:</strong> Sourcing high-performance gear.</li>
+                    <li><strong>Maintenance:</strong> Routine checks & troubleshooting.</li>
+                    <li><strong>Networking:</strong> Structured cabling & server setups.</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="icon-wrapper"><i class="fa-solid fa-video"></i></div>
+                <h2>Media Solutions</h2>
+                <span class="focus-text">Focus: Visual Communication</span>
+                <ul class="service-list">
+                    <li><strong>Live Streaming:</strong> Multi-camera production setups.</li>
+                    <li><strong>AV Production:</strong> Editing, sound, and graphics.</li>
+                    <li><strong>Equipment Rental:</strong> Cameras, lighting & sound systems.</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="icon-wrapper"><i class="fa-solid fa-shield-halved"></i></div>
+                <h2>Cyber Security</h2>
+                <span class="focus-text">Focus: Asset Protection</span>
+                <ul class="service-list">
+                    <li><strong>Vulnerability:</strong> Identifying & patching weak points.</li>
+                    <li><strong>Data Privacy:</strong> Encryption & compliance services.</li>
+                    <li><strong>Threat Monitoring:</strong> Real-time attack prevention.</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="icon-wrapper"><i class="fa-solid fa-briefcase"></i></div>
+                <h2>Consultancy</h2>
+                <span class="focus-text">Focus: Strategic Guidance</span>
+                <ul class="service-list">
+                    <li><strong>IT Strategy:</strong> Leveraging tech for business goals.</li>
+                    <li><strong>System Audits:</strong> Efficiency & scalability checks.</li>
+                    <li><strong>Training:</strong> Workshops on software & security.</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="icon-wrapper"><i class="fa-solid fa-bullhorn"></i></div>
+                <h2>PR Solutions</h2>
+                <span class="focus-text">Focus: Brand Visibility</span>
+
+                <p class="card-description">
+                    We're the PR pros you're looking for! 🌟 Our agency brings the fire 🔥 with a menu that packs a punch:
+                </p>
+
+                <ul class="service-list">
+                    <li><strong>Content Creations:</strong> Stories that slay 💥</li>
+                    <li><strong>Graphic Design:</strong> Designs that pop ✨</li>
+                    <li><strong>Video Adverts:</strong> Ads that go viral 🎥</li>
+                </ul>
+
+                <p style="margin-top: 1rem; font-weight: 600; color: var(--primary-color);">
+                    Let's chat about taking your brand to the next level 🚀
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
